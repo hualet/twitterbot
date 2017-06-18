@@ -1,0 +1,21 @@
+# Shamelessly copied from justforfunc at the begining.
+
+[Unit]
+Description=Automatically retweet tweets and follow the poster.
+After=network.target
+
+[Service]
+User=xxx
+WorkingDirectory=xxx
+ExecStart=/products/twitterbot
+Restart=on-abort
+
+# These credentials will not work for you, you need to create your own
+# at apps.twitter.com.
+Environment=TWITTER_CONSUMER_KEY=xxx
+Environment=TWITTER_CONSUMER_SECRET=xxx
+Environment=TWITTER_ACCESS_TOKEN=xxx
+Environment=TWITTER_ACCESS_TOKEN_SECRET=xxx
+
+[Install]
+WantedBy=multi-user.target
