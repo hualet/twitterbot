@@ -34,7 +34,7 @@ func main() {
 	api.SetLogger(log)
 
 	stream := api.PublicStreamFilter(url.Values{
-		"track": []string{"#deepin", "#golang", "#linux"},
+		"track": []string{"deepin"},
 	})
 
 	defer stream.Stop()
